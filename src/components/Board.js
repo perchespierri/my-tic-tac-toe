@@ -10,7 +10,7 @@ const Board = ({ squares, onClickBoard }) => {
           value={square} 
           onClickSquare={() => onClickBoard(index)}
         />
-      ))};
+      ))}
     </div>
   );
 }
