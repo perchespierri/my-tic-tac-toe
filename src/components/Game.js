@@ -10,7 +10,8 @@ const Game = () => {
   const winner = calculateWinner(history[stepNumber]);
   const showXorO = xIsNext ? 'X' : 'O';
 
-  const handleClick = (index) => { // onClickBoard and onClickSquare
+  const handleClick = (index) => { 
+    // onClickBoard and onClickSquare
     const historyPoint = history.slice(0, stepNumber + 1);
     const current = historyPoint[stepNumber];
     const squares = [...current];
@@ -30,7 +31,9 @@ const Game = () => {
 
   const renderMoves = () => (
     history.map((_step, move) => {
-      const destination = move ? `Go to move #${move}` : "Go to start";
+      const destination = move
+        ? `Go to move #${move}`
+        : "Go to start";
       return (
         <li key={move}>
           <button onClick={() => jumpTo(move)}>
@@ -50,7 +53,12 @@ const Game = () => {
           <h3>History</h3>
           {renderMoves()}
         </div>  
-        <h3>{winner ? `Winner: ${winner}` : `Next player: ${showXorO}`}</h3>
+        <h3>
+          {winner
+            ? `Winner: ${winner}`
+            : `Next player: ${showXorO}`
+          }
+        </h3>
       </div>
     </>
   );

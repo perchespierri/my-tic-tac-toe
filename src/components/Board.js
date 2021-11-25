@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import Square from './Square';
 
 const Board = ({ squares, onClickBoard }) => {
@@ -10,9 +10,9 @@ const Board = ({ squares, onClickBoard }) => {
           value={square} 
           onClickSquare={() => onClickBoard(index)}
         />
-      ))}
+      ))};
     </div>
-  )
+  );
 }
 
-export default Board
+export default Board;
